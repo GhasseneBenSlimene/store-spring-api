@@ -1,20 +1,17 @@
 package com.ghassene.store.controllers;
 
-import com.ghassene.store.Dtos.ProductDto;
+import com.ghassene.store.dtos.ProductDto;
 import com.ghassene.store.entities.Category;
 import com.ghassene.store.entities.Product;
 import com.ghassene.store.mappers.ProductMapper;
 import com.ghassene.store.repositories.CategoryRepository;
 import com.ghassene.store.repositories.ProductRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.Objects;
 
 @RestController
 @AllArgsConstructor

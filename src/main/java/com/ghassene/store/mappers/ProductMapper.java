@@ -1,6 +1,6 @@
 package com.ghassene.store.mappers;
 
-import com.ghassene.store.Dtos.ProductDto;
+import com.ghassene.store.dtos.ProductDto;
 import com.ghassene.store.entities.Product;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

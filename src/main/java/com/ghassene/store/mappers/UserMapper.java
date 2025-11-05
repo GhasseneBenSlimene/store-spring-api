@@ -1,8 +1,8 @@
 package com.ghassene.store.mappers;
 
-import com.ghassene.store.Dtos.RegisterUserRequest;
-import com.ghassene.store.Dtos.UpdateUserRequest;
-import com.ghassene.store.Dtos.UserDto;
+import com.ghassene.store.dtos.RegisterUserRequest;
+import com.ghassene.store.dtos.UpdateUserRequest;
+import com.ghassene.store.dtos.UserDto;
 import com.ghassene.store.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

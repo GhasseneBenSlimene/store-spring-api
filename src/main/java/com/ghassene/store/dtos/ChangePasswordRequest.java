@@ -1,4 +1,4 @@
-package com.ghassene.store.Dtos;
+package com.ghassene.store.dtos;
 
 import lombok.Data;
 
