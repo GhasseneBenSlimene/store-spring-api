@@ -3,14 +3,12 @@ package com.ghassene.store.controllers;
 import com.ghassene.store.dtos.AddItemToCartRequest;
 import com.ghassene.store.dtos.CartDto;
 import com.ghassene.store.dtos.CartItemDto;
-import com.ghassene.store.dtos.CartProductDto;
 import com.ghassene.store.entities.Cart;
 import com.ghassene.store.entities.CartItem;
 import com.ghassene.store.entities.Product;
 import com.ghassene.store.mappers.CartMapper;
 import com.ghassene.store.repositories.CartRepository;
 import com.ghassene.store.repositories.ProductRepository;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,7 +53,7 @@ public class CartController {
             return ResponseEntity.badRequest().build();
         }
 
-        var cartItem = cart.getCartItems().stream()
+        var cartItem = cart.getItems().stream()
                 .filter(ci -> ci.getProduct().getId().equals(product.getId()))
                 .findFirst()
                 .orElse(null);
@@ -66,12 +64,23 @@ public class CartController {
             cartItem.setCart(cart);
             cartItem.setProduct(product);
             cartItem.setQuantity(1);
-            cart.getCartItems().add(cartItem);
+            cart.getItems().add(cartItem);
         }
         cartRepository.save(cart);
 
         CartItemDto cartItemDto = cartMapper.toDto(cartItem);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(cartItemDto);
+    }
+
+    @GetMapping("/{cartId}")
+    public ResponseEntity<CartDto> getcart(@PathVariable UUID cartId){
+        Cart cart = cartRepository.findById(cartId).orElse(null);
+
+        if (cart == null){
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(cartMapper.toDto(cart));
     }
 }
