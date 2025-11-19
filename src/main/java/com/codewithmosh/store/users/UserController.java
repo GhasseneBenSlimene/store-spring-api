@@ -1,12 +1,5 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.users;
 
-import com.ghassenebenslimene.store.dtos.ChangePasswordRequest;
-import com.ghassenebenslimene.store.dtos.RegisterUserRequest;
-import com.ghassenebenslimene.store.dtos.UpdateUserRequest;
-import com.ghassenebenslimene.store.dtos.UserDto;
-import com.ghassenebenslimene.store.entities.Role;
-import com.ghassenebenslimene.store.mappers.UserMapper;
-import com.ghassenebenslimene.store.repositories.UserRepository;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;

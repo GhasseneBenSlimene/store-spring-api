@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.validation;
+package com.ghassenebenslimene.store.users;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

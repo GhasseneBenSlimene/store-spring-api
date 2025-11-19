@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.repositories;
+package com.ghassenebenslimene.store.users;
 
-import com.ghassenebenslimene.store.entities.Address;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AddressRepository extends CrudRepository<Address, Long> {

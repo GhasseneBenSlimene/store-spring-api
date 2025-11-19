@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.users;
 
-import com.ghassenebenslimene.store.validation.Lowercase;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

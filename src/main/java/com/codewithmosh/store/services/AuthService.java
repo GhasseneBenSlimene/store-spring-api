@@ -1,7 +1,7 @@
 package com.ghassenebenslimene.store.services;
 
-import com.ghassenebenslimene.store.entities.User;
-import com.ghassenebenslimene.store.repositories.UserRepository;
+import com.ghassenebenslimene.store.users.User;
+import com.ghassenebenslimene.store.users.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

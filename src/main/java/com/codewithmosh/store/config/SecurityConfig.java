@@ -1,6 +1,6 @@
 package com.ghassenebenslimene.store.config;
 
-import com.ghassenebenslimene.store.entities.Role;
+import com.ghassenebenslimene.store.users.Role;
 import com.ghassenebenslimene.store.filters.JwtAuthenticationFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
