@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.payments;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
