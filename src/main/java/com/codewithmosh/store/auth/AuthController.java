@@ -1,12 +1,8 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.auth;
 
-import com.ghassenebenslimene.store.config.JwtConfig;
-import com.ghassenebenslimene.store.dtos.JwtResponse;
-import com.ghassenebenslimene.store.dtos.LoginRequest;
 import com.ghassenebenslimene.store.users.UserDto;
 import com.ghassenebenslimene.store.users.UserMapper;
 import com.ghassenebenslimene.store.users.UserRepository;
-import com.ghassenebenslimene.store.services.JwtService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;

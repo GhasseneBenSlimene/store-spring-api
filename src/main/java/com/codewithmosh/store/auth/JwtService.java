@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.auth;
 
-import com.ghassenebenslimene.store.config.JwtConfig;
 import com.ghassenebenslimene.store.users.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

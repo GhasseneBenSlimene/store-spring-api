@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.auth;
 
 import com.ghassenebenslimene.store.users.Role;
 import io.jsonwebtoken.Claims;

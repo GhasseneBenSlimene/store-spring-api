@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.filters;
+package com.ghassenebenslimene.store.auth;
 
-import com.ghassenebenslimene.store.services.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

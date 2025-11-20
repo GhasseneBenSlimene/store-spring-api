@@ -1,5 +1,6 @@
 package com.ghassenebenslimene.store.services;
 
+import com.ghassenebenslimene.store.auth.AuthService;
 import com.ghassenebenslimene.store.dtos.OrderDto;
 import com.ghassenebenslimene.store.exceptions.OrderNotFoundException;
 import com.ghassenebenslimene.store.mappers.OrderMapper;
