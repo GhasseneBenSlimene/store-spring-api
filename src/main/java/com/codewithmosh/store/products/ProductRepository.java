@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.repositories;
+package com.ghassenebenslimene.store.products;
 
-import com.ghassenebenslimene.store.entities.Product;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

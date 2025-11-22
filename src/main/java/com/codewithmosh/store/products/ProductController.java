@@ -1,10 +1,5 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.products;
 
-import com.ghassenebenslimene.store.dtos.ProductDto;
-import com.ghassenebenslimene.store.entities.Product;
-import com.ghassenebenslimene.store.mappers.ProductMapper;
-import com.ghassenebenslimene.store.repositories.CategoryRepository;
-import com.ghassenebenslimene.store.repositories.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

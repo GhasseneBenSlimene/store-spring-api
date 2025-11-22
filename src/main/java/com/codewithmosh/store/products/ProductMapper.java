@@ -1,7 +1,5 @@
-package com.ghassenebenslimene.store.mappers;
+package com.ghassenebenslimene.store.products;
 
-import com.ghassenebenslimene.store.dtos.ProductDto;
-import com.ghassenebenslimene.store.entities.Product;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
