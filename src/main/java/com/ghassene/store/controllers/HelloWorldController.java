@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MessageController {
+public class HelloWorldController {
 
     @RequestMapping("/hello")
     public Message sayHello(){
