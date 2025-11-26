@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.carts;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

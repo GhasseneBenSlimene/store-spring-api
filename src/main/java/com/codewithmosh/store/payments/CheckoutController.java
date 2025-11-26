@@ -1,8 +1,8 @@
 package com.ghassenebenslimene.store.payments;
 
 import com.ghassenebenslimene.store.dtos.ErrorDto;
-import com.ghassenebenslimene.store.exceptions.CartEmptyException;
-import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
+import com.ghassenebenslimene.store.carts.CartEmptyException;
+import com.ghassenebenslimene.store.carts.CartNotFoundException;
 import com.ghassenebenslimene.store.repositories.OrderRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
