@@ -1,9 +1,6 @@
 package com.ghassene.store.controllers;
 
-import com.ghassene.store.dtos.ChangePasswordRequest;
-import com.ghassene.store.dtos.RegisterUserRequest;
-import com.ghassene.store.dtos.UpdateUserRequest;
-import com.ghassene.store.dtos.UserDto;
+import com.ghassene.store.dtos.*;
 import com.ghassene.store.entities.User;
 import com.ghassene.store.mappers.UserMapper;
 import com.ghassene.store.repositories.UserRepository;
@@ -65,6 +62,7 @@ public class UserController {
         var uri = uriBuilder.path("/users/{id}").buildAndExpand(user.getId()).toUri();
         return ResponseEntity.created(uri).body(userDto);
     }
+
 
     @PostMapping("/{id}/change-password")
     public ResponseEntity<Void> changePassword(@PathVariable Long id,
