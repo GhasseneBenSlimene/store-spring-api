@@ -135,6 +135,13 @@
                 <version>10.15.0</version>
                 <configuration>
                     <url>jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true</url>
+                    <!--
+                      WARNING: Do not commit secrets in plain text.
+                      In production, hide credentials and secrets (DB/JWT):
+                      - Use environment variables, CI/CD secrets (e.g. GitHub Secrets) or a secret manager (Vault, Key Vault).
+                      - Never hardcode secrets in the POM or resource files.
+                      - Rotate secrets immediately if they have been exposed.
+                    -->
                     <user>root</user>
                     <password>1234</password>
                     <cleanDisabled>false</cleanDisabled>
