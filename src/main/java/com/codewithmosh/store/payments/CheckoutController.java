@@ -3,7 +3,7 @@ package com.ghassenebenslimene.store.payments;
 import com.ghassenebenslimene.store.dtos.ErrorDto;
 import com.ghassenebenslimene.store.carts.CartEmptyException;
 import com.ghassenebenslimene.store.carts.CartNotFoundException;
-import com.ghassenebenslimene.store.repositories.OrderRepository;
+import com.ghassenebenslimene.store.orders.OrderRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

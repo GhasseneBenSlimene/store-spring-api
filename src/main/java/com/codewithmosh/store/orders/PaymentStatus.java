@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.entities;
+package com.ghassenebenslimene.store.orders;
 
 public enum PaymentStatus {
     PENDING,

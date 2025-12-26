@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.entities;
+package com.ghassenebenslimene.store.orders;
 
 import com.ghassenebenslimene.store.products.Product;
 import jakarta.persistence.*;
