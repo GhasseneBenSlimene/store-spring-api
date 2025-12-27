@@ -1,6 +1,6 @@
 package com.ghassenebenslimene.store.payments;
 
-import com.ghassenebenslimene.store.entities.PaymentStatus;
+import com.ghassenebenslimene.store.orders.PaymentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.entities;
+package com.ghassenebenslimene.store.orders;
 
 import com.ghassenebenslimene.store.carts.Cart;
 import com.ghassenebenslimene.store.users.User;

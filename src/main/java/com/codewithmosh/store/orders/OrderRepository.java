@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.repositories;
+package com.ghassenebenslimene.store.orders;
 
-import com.ghassenebenslimene.store.entities.Order;
 import com.ghassenebenslimene.store.users.User;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
