@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.admin;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

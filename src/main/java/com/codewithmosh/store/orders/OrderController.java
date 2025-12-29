@@ -1,6 +1,6 @@
 package com.ghassenebenslimene.store.orders;
 
-import com.ghassenebenslimene.store.dtos.ErrorDto;
+import com.ghassenebenslimene.store.common.ErrorDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
