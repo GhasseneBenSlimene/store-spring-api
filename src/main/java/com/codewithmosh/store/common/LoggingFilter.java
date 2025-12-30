@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.filters;
+package com.ghassenebenslimene.store.common;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
