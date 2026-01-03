@@ -1,9 +1,8 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.payments;
 
 import com.ghassenebenslimene.store.entities.Order;
 import com.ghassenebenslimene.store.entities.OrderItem;
 import com.ghassenebenslimene.store.entities.PaymentStatus;
-import com.ghassenebenslimene.store.exceptions.PaymentException;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;

@@ -1,17 +1,11 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.payments;
 
-import com.ghassenebenslimene.store.dtos.CheckoutRequest;
-import com.ghassenebenslimene.store.dtos.CheckoutResponse;
 import com.ghassenebenslimene.store.dtos.ErrorDto;
 import com.ghassenebenslimene.store.exceptions.CartEmptyException;
 import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
-import com.ghassenebenslimene.store.exceptions.PaymentException;
 import com.ghassenebenslimene.store.repositories.OrderRepository;
-import com.ghassenebenslimene.store.services.CheckoutService;
-import com.ghassenebenslimene.store.services.WebhookRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

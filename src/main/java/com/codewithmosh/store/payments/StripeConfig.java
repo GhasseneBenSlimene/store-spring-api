@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.config;
+package com.ghassenebenslimene.store.payments;
 
 import com.stripe.Stripe;
 import jakarta.annotation.PostConstruct;

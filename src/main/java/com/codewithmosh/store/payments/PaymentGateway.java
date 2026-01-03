@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.payments;
 
 import com.ghassenebenslimene.store.entities.Order;
 

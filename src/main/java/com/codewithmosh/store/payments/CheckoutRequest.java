@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.payments;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

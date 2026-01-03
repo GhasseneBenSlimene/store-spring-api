@@ -1,13 +1,12 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.payments;
 
-import com.ghassenebenslimene.store.dtos.CheckoutRequest;
-import com.ghassenebenslimene.store.dtos.CheckoutResponse;
 import com.ghassenebenslimene.store.entities.Order;
 import com.ghassenebenslimene.store.exceptions.CartEmptyException;
 import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
-import com.ghassenebenslimene.store.exceptions.PaymentException;
 import com.ghassenebenslimene.store.repositories.CartRepository;
 import com.ghassenebenslimene.store.repositories.OrderRepository;
+import com.ghassenebenslimene.store.services.AuthService;
+import com.ghassenebenslimene.store.services.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

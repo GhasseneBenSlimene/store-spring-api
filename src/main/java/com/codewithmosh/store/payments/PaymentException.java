@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.exceptions;
+package com.ghassenebenslimene.store.payments;
 
 import lombok.NoArgsConstructor;
 
