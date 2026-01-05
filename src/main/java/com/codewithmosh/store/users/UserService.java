@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.users;
 
-import com.ghassenebenslimene.store.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

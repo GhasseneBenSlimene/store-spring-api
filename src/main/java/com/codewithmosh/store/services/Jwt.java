@@ -1,6 +1,6 @@
 package com.ghassenebenslimene.store.services;
 
-import com.ghassenebenslimene.store.entities.Role;
+import com.ghassenebenslimene.store.users.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 

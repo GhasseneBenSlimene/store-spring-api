@@ -1,7 +1,7 @@
 package com.ghassenebenslimene.store.repositories;
 
 import com.ghassenebenslimene.store.entities.Order;
-import com.ghassenebenslimene.store.entities.User;
+import com.ghassenebenslimene.store.users.User;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

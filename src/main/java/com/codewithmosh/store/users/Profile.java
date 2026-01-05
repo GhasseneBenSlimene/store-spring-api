@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.entities;
+package com.ghassenebenslimene.store.users;
 
 import jakarta.persistence.*;
 import lombok.*;
