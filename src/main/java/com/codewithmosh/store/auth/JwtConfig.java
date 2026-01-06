@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.config;
+package com.ghassenebenslimene.store.auth;
 
 import io.jsonwebtoken.security.Keys;
 import lombok.Data;

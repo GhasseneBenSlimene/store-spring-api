@@ -5,7 +5,7 @@ import com.ghassenebenslimene.store.exceptions.CartEmptyException;
 import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
 import com.ghassenebenslimene.store.repositories.CartRepository;
 import com.ghassenebenslimene.store.repositories.OrderRepository;
-import com.ghassenebenslimene.store.services.AuthService;
+import com.ghassenebenslimene.store.auth.AuthService;
 import com.ghassenebenslimene.store.services.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

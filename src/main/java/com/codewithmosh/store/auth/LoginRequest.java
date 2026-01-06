@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

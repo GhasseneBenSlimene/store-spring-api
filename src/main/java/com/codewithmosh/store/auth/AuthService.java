@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.auth;
 
 import com.ghassenebenslimene.store.users.User;
 import com.ghassenebenslimene.store.users.UserRepository;
