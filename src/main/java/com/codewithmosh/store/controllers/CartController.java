@@ -5,7 +5,7 @@ import com.ghassenebenslimene.store.dtos.CartDto;
 import com.ghassenebenslimene.store.dtos.CartItemDto;
 import com.ghassenebenslimene.store.dtos.UpdateCartItemRequest;
 import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
-import com.ghassenebenslimene.store.exceptions.ProductNotFoundException;
+import com.ghassenebenslimene.store.products.ProductNotFoundException;
 import com.ghassenebenslimene.store.services.CartService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

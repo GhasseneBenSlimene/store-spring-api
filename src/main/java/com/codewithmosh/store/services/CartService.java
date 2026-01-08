@@ -4,10 +4,10 @@ import com.ghassenebenslimene.store.dtos.CartDto;
 import com.ghassenebenslimene.store.dtos.CartItemDto;
 import com.ghassenebenslimene.store.entities.Cart;
 import com.ghassenebenslimene.store.exceptions.CartNotFoundException;
-import com.ghassenebenslimene.store.exceptions.ProductNotFoundException;
+import com.ghassenebenslimene.store.products.ProductNotFoundException;
 import com.ghassenebenslimene.store.mappers.CartMapper;
 import com.ghassenebenslimene.store.repositories.CartRepository;
-import com.ghassenebenslimene.store.repositories.ProductRepository;
+import com.ghassenebenslimene.store.products.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

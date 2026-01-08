@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.exceptions;
+package com.ghassenebenslimene.store.products;
 
 public class ProductNotFoundException extends RuntimeException {
 }

@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.repositories;
+package com.ghassenebenslimene.store.products;
 
-import com.ghassenebenslimene.store.entities.Category;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CategoryRepository extends CrudRepository<Category, Byte> {
