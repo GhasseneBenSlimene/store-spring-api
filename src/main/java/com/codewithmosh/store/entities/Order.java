@@ -1,5 +1,6 @@
 package com.ghassenebenslimene.store.entities;
 
+import com.ghassenebenslimene.store.carts.Cart;
 import com.ghassenebenslimene.store.users.User;
 import jakarta.persistence.*;
 import lombok.Getter;

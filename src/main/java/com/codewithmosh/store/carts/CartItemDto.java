@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.carts;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 @Data
 public class CartItemDto {
-    private CartProductDto product;
+    private ProductDto product;
     private int quantity;
     private BigDecimal totalPrice;
 }

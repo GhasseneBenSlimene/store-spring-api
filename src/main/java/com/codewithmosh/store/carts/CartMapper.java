@@ -1,9 +1,5 @@
-package com.ghassenebenslimene.store.mappers;
+package com.ghassenebenslimene.store.carts;
 
-import com.ghassenebenslimene.store.dtos.CartDto;
-import com.ghassenebenslimene.store.dtos.CartItemDto;
-import com.ghassenebenslimene.store.entities.Cart;
-import com.ghassenebenslimene.store.entities.CartItem;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
