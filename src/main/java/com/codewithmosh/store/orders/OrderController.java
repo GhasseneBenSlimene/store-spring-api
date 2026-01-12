@@ -1,9 +1,6 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.orders;
 
 import com.ghassenebenslimene.store.dtos.ErrorDto;
-import com.ghassenebenslimene.store.dtos.OrderDto;
-import com.ghassenebenslimene.store.exceptions.OrderNotFoundException;
-import com.ghassenebenslimene.store.services.OrderService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

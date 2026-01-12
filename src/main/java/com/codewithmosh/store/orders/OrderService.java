@@ -1,10 +1,6 @@
-package com.ghassenebenslimene.store.services;
+package com.ghassenebenslimene.store.orders;
 
 import com.ghassenebenslimene.store.auth.AuthService;
-import com.ghassenebenslimene.store.dtos.OrderDto;
-import com.ghassenebenslimene.store.exceptions.OrderNotFoundException;
-import com.ghassenebenslimene.store.mappers.OrderMapper;
-import com.ghassenebenslimene.store.repositories.OrderRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
