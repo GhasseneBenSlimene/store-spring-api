@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.dtos;
+package com.ghassenebenslimene.store.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

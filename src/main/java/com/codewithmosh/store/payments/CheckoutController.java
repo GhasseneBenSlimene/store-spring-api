@@ -1,6 +1,6 @@
 package com.ghassenebenslimene.store.payments;
 
-import com.ghassenebenslimene.store.dtos.ErrorDto;
+import com.ghassenebenslimene.store.common.ErrorDto;
 import com.ghassenebenslimene.store.carts.CartEmptyException;
 import com.ghassenebenslimene.store.carts.CartNotFoundException;
 import com.ghassenebenslimene.store.orders.OrderRepository;

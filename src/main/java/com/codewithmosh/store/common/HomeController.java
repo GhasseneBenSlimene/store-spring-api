@@ -1,4 +1,4 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.common;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

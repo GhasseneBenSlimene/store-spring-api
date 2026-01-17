@@ -1,6 +1,5 @@
-package com.ghassenebenslimene.store.controllers;
+package com.ghassenebenslimene.store.common;
 
-import com.ghassenebenslimene.store.dtos.ErrorDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
