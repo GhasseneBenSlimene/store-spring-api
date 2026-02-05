@@ -2,16 +2,15 @@ package com.ghassenebenslimene.store.orders;
 
 import com.ghassenebenslimene.store.auth.AuthService;
 import com.ghassenebenslimene.store.users.Role;
-import com.ghassenebenslimene.store.orders.PaymentStatus;
 import com.ghassenebenslimene.store.users.User;
 import com.ghassenebenslimene.store.users.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -34,10 +33,10 @@ class OrderServiceIntegrationTest {
     @Autowired
     private UserRepository userRepository;
 
-    @MockBean
+    @MockitoBean
     private AuthService authService;
 
-    @MockBean
+    @MockitoBean
     private OrderMapper orderMapper;
 
     @BeforeEach
