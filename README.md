@@ -4,19 +4,21 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.1-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
-[![Swagger](https://img.shields.io/badge/OpenAPI-Swagger-85EA2D?logo=swagger&logoColor=black)](http://localhost:8080/swagger-ui.html)
+[![Swagger](https://img.shields.io/badge/OpenAPI-Swagger-85EA2D?logo=swagger&logoColor=black)](http://localhost:18080/swagger-ui.html)
 ![CI](https://img.shields.io/badge/CI-enabled-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-automated-brightgreen)
 
-Backend e-commerce complet construit avec **Java 17** et **Spring Boot 3** : authentification JWT, panier/commandes, intégration Stripe, migrations Flyway et documentation OpenAPI.
+Store API est un backend e-commerce complet construit avec **Java 17** et **Spring Boot 3** : authentification JWT, gestion du panier et des commandes, intégration Stripe, migrations Flyway et documentation OpenAPI.
+
+Le projet est pensé comme une **base backend open source, prête à l’emploi**, pour toute personne souhaitant lancer son propre site e-commerce.
 
 ## Pourquoi ce projet
 
-- Architecture backend modulaire (`auth`, `users`, `products`, `carts`, `orders`, `payments`)
-- Sécurité avec Spring Security + JWT (routes publiques/privées)
-- Base MySQL versionnée avec Flyway
+- Architecture modulaire et maintenable (`auth`, `users`, `products`, `carts`, `orders`, `payments`)
+- Sécurité robuste avec Spring Security + JWT (routes publiques/privées)
+- Schéma de base de données versionné avec Flyway
 - Exécution locale reproductible avec Docker Compose
-- CI GitHub Actions (build + tests)
+- Qualité continue via GitHub Actions (build + tests)
 
 ---
 
@@ -38,9 +40,9 @@ docker compose up -d --build
 
 ### Vérifier
 
-- API: http://localhost:8080
-- Swagger UI: http://localhost:8080/swagger-ui.html
-- OpenAPI JSON: http://localhost:8080/v3/api-docs
+- API: http://localhost:18080
+- Swagger UI: http://localhost:18080/swagger-ui.html
+- OpenAPI JSON: http://localhost:18080/v3/api-docs
 
 ### Arrêter
 
@@ -50,12 +52,12 @@ docker compose down
 
 ---
 
-## Core Features
+## Fonctionnalités clés
 
-- Authentification JWT (login, refresh, endpoint utilisateur courant)
-- Catalogue produits + filtrage
-- Gestion panier (create/add/update/remove/clear)
-- Checkout + webhook Stripe
+- Authentification JWT (login, refresh token, endpoint utilisateur courant)
+- Catalogue produits avec filtrage
+- Gestion du panier (création, ajout, mise à jour, suppression)
+- Checkout Stripe + gestion du webhook
 
 ---
 
@@ -85,16 +87,16 @@ PowerShell:
 
 ## Documentation
 
-- Démarrage local: [docs/local-development.md](docs/local-development.md)
 - Docker: [docs/docker.md](docs/docker.md)
 - CI/CD: [docs/ci-cd.md](docs/ci-cd.md)
 - Architecture: [docs/architecture.md](docs/architecture.md)
-- Exemples API: [docs/api-examples.md](docs/api-examples.md)
+- Guide de test complet: [docs/api-testing-guide.md](docs/api-testing-guide.md)
 
 ---
 
 ## Variables d'environnement
 
-- Le projet est testable sans `.env` (valeurs de démo)
-- Pour personnaliser: copie [.env.example](.env.example) vers `.env`
-- Pour un usage réel: remplace toutes les valeurs `change_me_*`
+- Le projet est testable sans `.env` (valeurs de démonstration)
+- Pour personnaliser la configuration : copie [.env.example](.env.example) vers `.env`
+- Pour un usage réel : remplace toutes les valeurs `change_me_*`
+- Ports hôte par défaut : `API_HOST_PORT=18080` et `DB_HOST_PORT=13306`
