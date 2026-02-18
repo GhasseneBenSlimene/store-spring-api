@@ -1,77 +1,48 @@
 # Docker Guide
 
-## Prerequisites
+## Ports hôte (par défaut)
 
-- Docker Desktop running
-- Docker Compose available (`docker compose`)
+- API: `18080` -> conteneur `8080`
+- MySQL: `13306` -> conteneur `3306`
 
-## Start
+Ces ports évitent les conflits fréquents avec des services déjà installés localement.
 
-### Option A: without `.env` (demo values)
+## Démarrer
+
+### Option A — sans `.env`
 
 ```bash
 docker compose up -d --build
 ```
 
-### Option B: with custom `.env`
+### Option B — avec `.env`
 
 ```bash
 cp .env.example .env
-# edit .env
+# modifie les variables si besoin
 docker compose up -d --build
 ```
 
-## Verify
+## Vérifier
 
 ```bash
 docker compose ps
 docker compose logs -f api
 ```
 
-- API: http://localhost:8080
-- Swagger UI: http://localhost:8080/swagger-ui.html
-- OpenAPI: http://localhost:8080/v3/api-docs
+- API: http://localhost:18080
+- Swagger UI: http://localhost:18080/swagger-ui.html
+- OpenAPI: http://localhost:18080/v3/api-docs
+- MySQL host: `localhost:13306`
 
-## Stop
+## Arrêter
 
 ```bash
 docker compose down
 ```
 
-Reset database volume:
+Reset DB (optionnel):
 
 ```bash
 docker compose down -v
-```
-
-## Useful commands
-
-```bash
-# Rebuild API image
-docker compose build api
-
-# Follow DB logs
-docker compose logs -f database
-
-# Open shell in API container
-docker compose exec api sh
-```
-
-## Troubleshooting
-
-### Port already in use (8080 or 3306)
-
-- Stop local service using the port, then re-run `docker compose up -d`.
-
-### API cannot connect to DB
-
-```bash
-docker compose logs database
-docker compose logs api
-```
-
-Wait until MySQL healthcheck is green, then restart API:
-
-```bash
-docker compose restart api
 ```
