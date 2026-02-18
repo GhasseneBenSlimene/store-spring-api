@@ -1,10 +1,10 @@
-# API Testing Guide (ordre logique)
+# API Testing Guide (logical order)
 
-Ce guide permet de tester l’application de bout en bout, de manière simple et structurée.
+This guide lets you test the application end-to-end in a simple and structured way.
 
-## 1) Préparation
+## 1) Preparation
 
-- Démarrer l’app:
+- Start the app:
 
 ```bash
 docker compose up -d --build
@@ -14,21 +14,21 @@ docker compose up -d --build
 - Swagger UI: `http://localhost:18080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:18080/v3/api-docs`
 
-## 2) Smoke test (API en ligne)
+## 2) Smoke test (API online)
 
-### 2.1 Produits (public)
+### 2.1 Products (public)
 
 ```bash
 curl http://localhost:18080/products
 ```
 
-Résultat attendu: HTTP 200 + liste de produits.
+Expected result: HTTP 200 + product list.
 
 ---
 
-## 3) Authentification
+## 3) Authentication
 
-## 3.1 Créer un utilisateur (public)
+## 3.1 Create a user (public)
 
 ```bash
 curl -X POST http://localhost:18080/users \
@@ -40,7 +40,7 @@ curl -X POST http://localhost:18080/users \
   }'
 ```
 
-Garde l’`id` retourné.
+Save the returned `id`.
 
 ### 3.2 Login
 
@@ -53,11 +53,11 @@ curl -X POST http://localhost:18080/auth/login \
   }'
 ```
 
-Résultat attendu: JSON `{ "token": "..." }`
+Expected result: JSON `{ "token": "..." }`
 
-Sauvegarde le token dans `<ACCESS_TOKEN>`.
+Save the token in `<ACCESS_TOKEN>`.
 
-### 3.3 Utilisateur courant
+### 3.3 Current user
 
 ```bash
 curl http://localhost:18080/auth/me \
@@ -66,17 +66,17 @@ curl http://localhost:18080/auth/me \
 
 ---
 
-## 4) Parcours panier
+## 4) Cart flow
 
-### 4.1 Créer un panier
+### 4.1 Create a cart
 
 ```bash
 curl -X POST http://localhost:18080/carts
 ```
 
-Sauvegarde `id` du panier dans `<CART_ID>`.
+Save cart `id` in `<CART_ID>`.
 
-### 4.2 Ajouter un produit au panier
+### 4.2 Add a product to cart
 
 ```bash
 curl -X POST http://localhost:18080/carts/<CART_ID>/items \
@@ -84,13 +84,13 @@ curl -X POST http://localhost:18080/carts/<CART_ID>/items \
   -d '{ "productId": 1 }'
 ```
 
-### 4.3 Lire le panier
+### 4.3 Read cart
 
 ```bash
 curl http://localhost:18080/carts/<CART_ID>
 ```
 
-### 4.4 Modifier la quantité
+### 4.4 Update quantity
 
 ```bash
 curl -X PUT http://localhost:18080/carts/<CART_ID>/items/1 \
@@ -98,13 +98,13 @@ curl -X PUT http://localhost:18080/carts/<CART_ID>/items/1 \
   -d '{ "quantity": 2 }'
 ```
 
-### 4.5 Supprimer un item
+### 4.5 Remove an item
 
 ```bash
 curl -X DELETE http://localhost:18080/carts/<CART_ID>/items/1
 ```
 
-### 4.6 Vider le panier
+### 4.6 Clear cart
 
 ```bash
 curl -X DELETE http://localhost:18080/carts/<CART_ID>/items
@@ -112,9 +112,9 @@ curl -X DELETE http://localhost:18080/carts/<CART_ID>/items
 
 ---
 
-## 5) Checkout + commandes
+## 5) Checkout + orders
 
-### 5.1 Re-ajouter un produit au panier
+### 5.1 Re-add a product to cart
 
 ```bash
 curl -X POST http://localhost:18080/carts/<CART_ID>/items \
@@ -122,7 +122,7 @@ curl -X POST http://localhost:18080/carts/<CART_ID>/items \
   -d '{ "productId": 1 }'
 ```
 
-### 5.2 Lancer le checkout (auth requis)
+### 5.2 Start checkout (auth required)
 
 ```bash
 curl -X POST http://localhost:18080/checkout \
@@ -131,16 +131,16 @@ curl -X POST http://localhost:18080/checkout \
   -d '{ "cartId": "<CART_ID>" }'
 ```
 
-Résultat attendu: `orderId` + `checkoutUrl`.
+Expected result: `orderId` + `checkoutUrl`.
 
-### 5.3 Lire les commandes de l’utilisateur
+### 5.3 Read user orders
 
 ```bash
 curl http://localhost:18080/orders \
   -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
-### 5.4 Lire une commande
+### 5.4 Read a single order
 
 ```bash
 curl http://localhost:18080/orders/<ORDER_ID> \
@@ -149,16 +149,16 @@ curl http://localhost:18080/orders/<ORDER_ID> \
 
 ---
 
-## 6) Endpoints utilisateur (auth)
+## 6) User endpoints (auth)
 
-### 6.1 Détail utilisateur
+### 6.1 User details
 
 ```bash
 curl http://localhost:18080/users/<USER_ID> \
   -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
-### 6.2 Mise à jour profil
+### 6.2 Update profile
 
 ```bash
 curl -X PUT http://localhost:18080/users/<USER_ID> \
@@ -167,7 +167,7 @@ curl -X PUT http://localhost:18080/users/<USER_ID> \
   -d '{ "name": "Updated Name", "email": "test.user@example.com" }'
 ```
 
-### 6.3 Changer mot de passe
+### 6.3 Change password
 
 ```bash
 curl -X POST http://localhost:18080/users/<USER_ID>/change-password \
@@ -178,31 +178,31 @@ curl -X POST http://localhost:18080/users/<USER_ID>/change-password \
 
 ---
 
-## 7) Endpoints admin (optionnel)
+## 7) Admin endpoints (optional)
 
-Nécessite un token avec rôle `ADMIN`.
+Requires a token with `ADMIN` role.
 
 ```bash
 curl http://localhost:18080/admin/hello \
   -H "Authorization: Bearer <ADMIN_ACCESS_TOKEN>"
 ```
 
-## 8) Résumé sécurité rapide
+## 8) Quick security summary
 
 - Public: `POST /users`, `POST /auth/login`, `POST /auth/refresh`, `GET /products/**`, `POST /checkout/webhook`, Swagger.
-- Auth requis: la plupart des autres routes (`/auth/me`, `/orders`, `/checkout`, `/users/**`, etc.).
-- Admin requis: `/admin/**`, `POST/PUT/DELETE /products/**`.
+- Auth required: most other routes (`/auth/me`, `/orders`, `/checkout`, `/users/**`, etc.).
+- Admin required: `/admin/**`, `POST/PUT/DELETE /products/**`.
 
-## 9) En cas de problème
+## 9) Troubleshooting
 
-- Vérifier les conteneurs:
+- Check containers:
 
 ```bash
 docker compose ps
 docker compose logs -f api
 ```
 
-- Arrêter proprement:
+- Stop cleanly:
 
 ```bash
 docker compose down
