@@ -1,29 +1,29 @@
 # Docker Guide
 
-## Ports hôte (par défaut)
+## Host ports (default)
 
-- API: `18080` -> conteneur `8080`
-- MySQL: `13306` -> conteneur `3306`
+- API: `18080` -> container `8080`
+- MySQL: `13306` -> container `3306`
 
-Ces ports évitent les conflits fréquents avec des services déjà installés localement.
+These ports avoid common conflicts with services already running locally.
 
-## Démarrer
+## Start
 
-### Option A — sans `.env`
+### Option A — without `.env`
 
 ```bash
 docker compose up -d --build
 ```
 
-### Option B — avec `.env`
+### Option B — with `.env`
 
 ```bash
 cp .env.example .env
-# modifie les variables si besoin
+# edit variables if needed
 docker compose up -d --build
 ```
 
-## Vérifier
+## Verify
 
 ```bash
 docker compose ps
@@ -35,13 +35,13 @@ docker compose logs -f api
 - OpenAPI: http://localhost:18080/v3/api-docs
 - MySQL host: `localhost:13306`
 
-## Arrêter
+## Stop
 
 ```bash
 docker compose down
 ```
 
-Reset DB (optionnel):
+Reset DB (optional):
 
 ```bash
 docker compose down -v

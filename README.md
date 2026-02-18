@@ -8,43 +8,43 @@
 ![CI](https://img.shields.io/badge/CI-enabled-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-automated-brightgreen)
 
-Store API est un backend e-commerce complet construit avec **Java 17** et **Spring Boot 3** : authentification JWT, gestion du panier et des commandes, intégration Stripe, migrations Flyway et documentation OpenAPI.
+Store API is a complete e-commerce backend built with **Java 17** and **Spring Boot 3**: JWT authentication, cart and order management, Stripe integration, Flyway migrations, and OpenAPI documentation.
 
-Le projet est pensé comme une **base backend open source, prête à l’emploi**, pour toute personne souhaitant lancer son propre site e-commerce.
+The project is designed as an **open-source, production-ready backend foundation** for anyone who wants to build their own e-commerce website.
 
-## Pourquoi ce projet
+## Why this project
 
-- Architecture modulaire et maintenable (`auth`, `users`, `products`, `carts`, `orders`, `payments`)
-- Sécurité robuste avec Spring Security + JWT (routes publiques/privées)
-- Schéma de base de données versionné avec Flyway
-- Exécution locale reproductible avec Docker Compose
-- Qualité continue via GitHub Actions (build + tests)
+- Modular and maintainable architecture (`auth`, `users`, `products`, `carts`, `orders`, `payments`)
+- Robust security with Spring Security + JWT (public/private routes)
+- Versioned database schema with Flyway
+- Reproducible local runtime with Docker Compose
+- Continuous quality checks through GitHub Actions (build + tests)
 
 ---
 
 ## Quick Start
 
-### Option A — Sans `.env` (le plus rapide)
+### Option A — Without `.env` (fastest)
 
 ```bash
 docker compose up -d --build
 ```
 
-### Option B — Avec `.env` personnalisé
+### Option B — With custom `.env`
 
 ```bash
 cp .env.example .env
-# édite .env avec tes valeurs
+# edit .env with your values
 docker compose up -d --build
 ```
 
-### Vérifier
+### Verify
 
 - API: http://localhost:18080
 - Swagger UI: http://localhost:18080/swagger-ui.html
 - OpenAPI JSON: http://localhost:18080/v3/api-docs
 
-### Arrêter
+### Stop
 
 ```bash
 docker compose down
@@ -52,16 +52,16 @@ docker compose down
 
 ---
 
-## Fonctionnalités clés
+## Core features
 
-- Authentification JWT (login, refresh token, endpoint utilisateur courant)
-- Catalogue produits avec filtrage
-- Gestion du panier (création, ajout, mise à jour, suppression)
-- Checkout Stripe + gestion du webhook
+- JWT authentication (login, refresh token, current user endpoint)
+- Product catalog with filtering
+- Cart management (create, add, update, remove)
+- Stripe checkout + webhook handling
 
 ---
 
-## Stack Technique
+## Tech stack
 
 - Java 17, Spring Boot 3.4.1
 - Spring Security, JWT
@@ -90,13 +90,13 @@ PowerShell:
 - Docker: [docs/docker.md](docs/docker.md)
 - CI/CD: [docs/ci-cd.md](docs/ci-cd.md)
 - Architecture: [docs/architecture.md](docs/architecture.md)
-- Guide de test complet: [docs/api-testing-guide.md](docs/api-testing-guide.md)
+- Full API testing guide: [docs/api-testing-guide.md](docs/api-testing-guide.md)
 
 ---
 
-## Variables d'environnement
+## Environment variables
 
-- Le projet est testable sans `.env` (valeurs de démonstration)
-- Pour personnaliser la configuration : copie [.env.example](.env.example) vers `.env`
-- Pour un usage réel : remplace toutes les valeurs `change_me_*`
-- Ports hôte par défaut : `API_HOST_PORT=18080` et `DB_HOST_PORT=13306`
+- The project is testable without `.env` (demo values)
+- To customize configuration: copy [.env.example](.env.example) to `.env`
+- For real usage: replace all `change_me_*` values
+- Default host ports: `API_HOST_PORT=18080` and `DB_HOST_PORT=13306`
