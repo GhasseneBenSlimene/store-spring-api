@@ -133,6 +133,8 @@ curl -X POST http://localhost:18080/checkout \
 
 Expected result: `orderId` + `checkoutUrl`.
 
+If Stripe is not configured with a valid **test** secret key (`sk_test_...`), this call can fail with `500`.
+
 ### 5.3 Read user orders
 
 ```bash
