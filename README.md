@@ -20,6 +20,16 @@ The project is designed as an **open-source, production-ready backend foundation
 - Reproducible local runtime with Docker Compose
 - Continuous quality checks through GitHub Actions (build + tests)
 
+## How a customer uses the app (30-second view)
+
+This journey shows the core product story in one glance: a shopper browses products, adds items to cart, authenticates securely, pays with Stripe, and receives order confirmation.
+
+![Shopper journey from browsing to order confirmation](docs/images/shopper-journey-from-browsing-to-order.png)
+
+**What this shows:** clear end-to-end e-commerce flow, secure access with JWT, and instant order status update after payment.
+
+For technical module-level and security details, see [docs/architecture.md](docs/architecture.md).
+
 ---
 
 ## Quick Start
