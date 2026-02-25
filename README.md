@@ -1,4 +1,4 @@
-# Store API — Spring Boot E-commerce Backend
+# Store API Starter — Open-Source Spring Boot E-commerce Backend
 
 [![Java](https://img.shields.io/badge/Java-17-007396?logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.1-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -24,27 +24,35 @@ The project is designed as an **open-source, production-ready backend foundation
 
 ## Quick Start
 
-### Option A — Without `.env` (fastest)
+### 1) Start the application
+
+#### Option A — Without `.env` (fastest)
 
 ```bash
 docker compose up -d --build
 ```
 
-### Option B — With custom `.env`
+#### Option B — With custom `.env`
 
 ```bash
 cp .env.example .env
-# edit .env with your values
+# optional: edit .env with your values
 docker compose up -d --build
 ```
 
-### Verify
+Need help with variables? See [Environment variables](#environment-variables).
 
-- API: http://localhost:18080
+### 2) Verify that the app is running
+
 - Swagger UI: http://localhost:18080/swagger-ui.html
 - OpenAPI JSON: http://localhost:18080/v3/api-docs
 
-### Stop
+### 3) Test APIs in a clear order
+
+- Follow the end-to-end guide: [docs/api-testing-guide.md](docs/api-testing-guide.md)
+- Or start with Swagger UI: http://localhost:18080/swagger-ui.html
+
+### 4) Stop
 
 ```bash
 docker compose down
@@ -68,20 +76,6 @@ docker compose down
 - MySQL 8, Flyway, JPA/Hibernate
 - Docker, Docker Compose
 - Maven, JUnit
-
----
-
-## Tests
-
-```bash
-./mvnw test
-```
-
-PowerShell:
-
-```powershell
-.\mvnw.cmd test
-```
 
 ---
 
