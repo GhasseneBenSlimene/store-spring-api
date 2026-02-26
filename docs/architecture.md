@@ -134,9 +134,13 @@ GitHub Actions workflow (`.github/workflows/ci-cd.yml`) runs on push/PR to `main
 
 ## 11) Deployability and runtime
 
-- Containerized local runtime with Docker + Docker Compose
-- API and DB run with configurable host ports
-- Environment-specific configuration through `application-*.yaml` and optional `.env`
+- Local runtime: Docker + Docker Compose
+- Production demo runtime: Azure Linux VM (no Docker), Java process managed by `systemd`
+- Public exposure through `Nginx` reverse proxy (`80 -> 8080`)
+- Environment-specific configuration through `application-*.yaml` and `.env`
+- Database in production demo: local MySQL service on VM
+
+See deployment runbook: [deployment-azure-vm.md](deployment-azure-vm.md)
 
 ## 12) Why this architecture is hiring-signal strong
 

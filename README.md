@@ -12,6 +12,13 @@ Store API is a complete e-commerce backend built with **Java 17** and **Spring B
 
 The project is designed as an **open-source, production-ready backend foundation** for anyone who wants to build their own e-commerce website.
 
+## Live demo
+
+- API base URL: `http://4.223.74.14`
+- Swagger UI: `http://4.223.74.14/swagger-ui.html`
+
+If the VM is temporarily stopped for cost optimization, endpoints may be unavailable until it is started again.
+
 ## Why this project
 
 - Modular and maintainable architecture (`auth`, `users`, `products`, `carts`, `orders`, `payments`)
@@ -20,7 +27,7 @@ The project is designed as an **open-source, production-ready backend foundation
 - Reproducible local runtime with Docker Compose
 - Continuous quality checks through GitHub Actions (build + tests)
 
-## How a customer uses the app (30-second view)
+## User journey (30-second view)
 
 This journey shows the core product story in one glance: a shopper browses products, adds items to cart, authenticates securely, pays with Stripe, and receives order confirmation.
 
@@ -94,6 +101,7 @@ docker compose down
 - Docker: [docs/docker.md](docs/docker.md)
 - CI/CD: [docs/ci-cd.md](docs/ci-cd.md)
 - Architecture: [docs/architecture.md](docs/architecture.md)
+- Azure VM deployment: [docs/deployment-azure-vm.md](docs/deployment-azure-vm.md)
 - Full API testing guide: [docs/api-testing-guide.md](docs/api-testing-guide.md)
 
 ---
@@ -104,3 +112,8 @@ docker compose down
 - To customize configuration: copy [.env.example](.env.example) to `.env`
 - For real usage: replace all `change_me_*` values
 - Default host ports: `API_HOST_PORT=18080` and `DB_HOST_PORT=13306`
+
+## Known limitations
+
+- Checkout endpoint requires valid Stripe **test** keys (`sk_test_...`, `whsec_...`).
+- With placeholder Stripe values, `POST /checkout` can return `500`.

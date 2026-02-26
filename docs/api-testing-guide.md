@@ -209,3 +209,10 @@ docker compose logs -f api
 ```bash
 docker compose down
 ```
+
+- If running without Docker on VM and startup fails with `Malformed entry export ...`, ensure `.env` lines are plain `KEY=value` (no `export`).
+- If running without Docker on VM and MySQL login fails, verify app user/password with:
+
+```bash
+mysql -u store_user -p -e "SELECT 1;" store_api
+```
