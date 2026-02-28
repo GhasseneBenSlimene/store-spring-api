@@ -34,7 +34,7 @@ services:
       JWT_SECRET: ${JWT_SECRET:-change_me_with_a_strong_secret_minimum_32_chars}
       STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-change_me_stripe_secret_key}
       STRIPE_WEBHOOK_SECRET_KEY: ${STRIPE_WEBHOOK_SECRET_KEY:-change_me_stripe_webhook_secret}
-      WEBSITE_URL: http://localhost:${API_HOST_PORT:-18080}
+      WEBSITE_URL: ${WEBSITE_URL:-http://4.223.74.14}
     depends_on:
       database:
         condition: service_healthy

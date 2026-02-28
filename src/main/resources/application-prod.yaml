@@ -3,4 +3,4 @@ spring:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
-websiteUrl: ${WEBSITE_URL:http://localhost:18080}
+websiteUrl: ${WEBSITE_URL:http://4.223.74.14}
